@@ -1,0 +1,699 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --text-white-hover: rgba(255, 255, 255, 0.7);
+    --main-color: #b51917;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #333;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* global */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.font-fantasy {
+    font-family: 'Dancing Script', cursive;
+}
+
+.main-color {
+    color: #b51917;
+}
+
+#our-story:after,
+#who-we-are:after,
+#wedding-details:after,
+#registry:after {
+    content: '';
+    width: 0;
+    border: 20px solid transparent;
+    border-top: 20px solid white;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, 0);
+    z-index: 10;
+}
+
+.any-section-caption {
+    width: 100%;
+    text-align: center;
+    padding: 150px 15px;
+}
+
+.any-section-caption h3 {
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.any-section-banner {
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.308), rgba(0, 0, 0, 0.308)), url(./../images/set1-young-couple-bw.jpg) no-repeat center center fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 0;
+    flex-wrap: wrap;
+}
+
+.any-section-banner h3 {
+    font-size: 70px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.any-section-banner p {
+    font-size: 20px;
+    color: white;
+    width: 100%;
+}
+
+.heart-line {
+    margin: 60px auto;
+    max-width: 400px;
+    height: 1px;
+    background-color: gray;
+    position: relative;
+}
+
+.heart-line .fa-heart {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--main-color);
+    padding: 10px;
+    background-color: white;
+}
+
+.any-section-detail-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 0;
+}
+
+.any-section-detail-box .detail-box {
+    width: 48%;
+}
+
+.any-section-detail-box .detail-box h3 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.any-section-detail-box .detail-box figure {
+    width: 100%;
+}
+
+.any-section-detail-box .detail-box figure .image-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.any-section-detail-box .detail-box figure .image-container img {
+    width: 100%;
+    display: block;
+    transition: 1s;
+    transform: scale(1);
+}
+
+.any-section-detail-box .detail-box figure .image-container:hover img {
+    transform: scale(1.1);
+}
+
+.any-section-detail-box .detail-box figure figcaption {
+    font-size: 30px;
+    margin: 30px 0 20px;
+    text-align: center;
+}
+
+.any-section-detail-box .detail-box figure p {
+    font-size: 20px;
+    text-align: center;
+    padding: 0 15;
+}
+
+.any-section-detail-box .detail-box figure .image-container .hover-circle {
+    width: 100px;
+    height: 100px;
+    background-color: #a00805dc;
+    border-radius: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-30deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.5s;
+    transition-timing-function: cubic-bezier(.47, .2, 1, 3);
+}
+
+.any-section-detail-box .detail-box figure .image-container:hover .hover-circle {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(0deg) scale(1.2);
+}
+
+.any-section-detail-box .detail-box figure .image-container .hover-circle i {
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.any-section-detail-box .detail-box figure .image-container:hover img {
+    transform: scale(1.1);
+}
+
+
+/* Header */
+
+#header {
+    background: linear-gradient(rgba(0, 0, 0, 0.438), rgba(0, 0, 0, 0.438)), url('./../images/set1-happy-couple-1500x630.jpg') no-repeat center top;
+    background-size: cover;
+    min-height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header .nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#header .nav .logo {
+    width: 250px;
+}
+
+#header .nav .logo img {
+    width: 100%;
+}
+
+#header .nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+#header .nav ul li {}
+
+#header .nav ul li a {
+    display: block;
+    font-size: 13px;
+    color: white;
+    padding: 15px 0;
+}
+
+#header .nav ul li a span {
+    padding: 0 20px;
+    border-left: 1px solid white;
+}
+
+#header .nav ul li:first-child a span {
+    border-left: none;
+    padding-left: 0;
+}
+
+#header .nav ul li:last-child a span {
+    padding-right: 0;
+}
+
+#header .nav ul li:hover a span {
+    color: var(--text-white-hover);
+    border-color: var(--text-white-hover);
+}
+
+#header .nav .menue-toggler {
+    display: none;
+}
+
+#header .nav .menue-toggler i {
+    color: white;
+    padding: 20px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#header .nav .menue-toggler i:hover {
+    color: var(--text-white-hover);
+}
+
+#header .header-section {
+    text-align: center;
+    color: white;
+}
+
+#header .header-section h1 {
+    font-size: 80px;
+    word-spacing: 1.5rem;
+    margin-bottom: 50px;
+}
+
+#header .header-section p {
+    font-size: 14px;
+}
+
+
+/* our story */
+
+#our-story {
+    width: 100%;
+    position: relative;
+}
+
+#our-story .our-story-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#our-story .our-story-content .any-section-caption p {
+    font-size: 25px;
+}
+
+#our-story .our-story-content .any-section-caption time {
+    font-size: 50px;
+    color: var(--main-color);
+}
+
+
+/* #our-story .our-story-content .our-story-detail {
+    width: 100%;
+    text-align: center;
+    padding: 150px 0;
+}
+
+#our-story .our-story-content .our-story-detail h3 {
+    font-size: 70px;
+    font-weight: bold;
+} */
+
+#our-story .our-story-content .any-section-caption .our-story-description {
+    display: flex;
+    justify-content: space-between;
+}
+
+#our-story .our-story-content .any-section-caption .our-story-description p {
+    width: 49%;
+    font-size: 20px;
+    text-align: justify;
+}
+
+
+/* who we are */
+
+#who-we-are {
+    position: relative;
+}
+
+#who-we-are .customers {
+    display: flex;
+}
+
+#who-we-are .customers h3 {
+    font-size: 50px;
+    text-align: center;
+}
+
+#who-we-are .customers .customes-side {
+    padding: 50px;
+    width: 50%;
+}
+
+#who-we-are .customers .customes-side .detail-box {
+    width: 30%;
+}
+
+#who-we-are .customers .customes-side .detail-box img {
+    border-radius: 50%;
+}
+
+#who-we-are .customers .customes-side .detail-box:hover img {
+    transform: scale(1);
+}
+
+#who-we-are .customers .customes-side .detail-box figcaption {
+    font-size: 20px;
+}
+
+
+/* wedding details */
+
+#wedding-details {
+    position: relative;
+}
+
+#wedding-details .any-section-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.308), rgba(0, 0, 0, 0.308)), url(./../images/wedding-colorful-light-balls-bw.jpg) no-repeat center center fixed;
+}
+
+#wedding-details .any-section-detail-box .detail-box>h3 {
+    font-size: 30px;
+}
+
+#wedding-details .any-section-detail-box .detail-box>p {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+
+/* accomodation */
+
+#accomodation .any-section-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.308), rgba(0, 0, 0, 0.308)), url(./../images/house-croisette-promenade-in-cannes-bw.jpg) no-repeat center center fixed;
+}
+
+#accomodation .any-section-detail-box .detail-box {
+    width: 30%;
+}
+
+#accomodation .any-section-detail-box .detail-box>h3 {
+    font-size: 30px;
+}
+
+#accomodation .any-section-detail-box .detail-box>p {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+#accomodation .any-section-detail-box .detail-box figure .image-container::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.301);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+#accomodation .any-section-detail-box .detail-box figure .image-container:hover::after {
+    opacity: 1;
+}
+
+#accomodation .any-section-caption {
+    padding: 0;
+}
+
+
+/* registry */
+
+#registry {
+    background: url(./../images/wedding-colorful-light-balls-bw1.jpg) no-repeat center top;
+    background-size: cover;
+    position: relative;
+}
+
+#registry .any-section-detail-box .detail-box {
+    width: 30%;
+}
+
+#registry .any-section-detail-box .detail-box figure .image-container::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.301);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+#registry .any-section-detail-box .detail-box figure .image-container:hover::after {
+    opacity: 1;
+}
+
+#registry:after {
+    content: '';
+    width: 0;
+    border: 20px solid transparent;
+    border-top: 20px solid #ece9e9af;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, 0);
+    z-index: 10;
+}
+
+
+/* contact us */
+
+#contact-us {
+    background: linear-gradient(rgba(0, 0, 0, 0.603), rgba(0, 0, 0, 0.603)), url(./../images/set1-young-couple.jpg) no-repeat center top fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 150px 15px;
+    color: white;
+}
+
+#contact-us .any-section-caption {
+    padding: 50px 0;
+}
+
+#contact-us .contact-us-inner {
+    background-color: rgba(255, 255, 255, 0.288);
+    width: 800px;
+}
+
+#contact-us .heart-line {
+    background: linear-gradient(to right, white 0%, white 45%, transparent 45%, transparent 55%, white 55%, white 100%);
+}
+
+#contact-us .heart-line i {
+    background-color: transparent;
+}
+
+#contact-us form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-bottom: 50px;
+}
+
+#contact-us form .input-parent {
+    width: 49%;
+}
+
+#contact-us form .input-parent label {
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+
+#contact-us form .input-parent input,
+#contact-us form .input-parent select {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    outline: 0;
+}
+
+#contact-us form .input-parent input[type='email']:valid {
+    border: 2px solid white;
+}
+
+#contact-us form .input-parent input[type='email']:invalid {
+    border: 2px solid tomato;
+}
+
+#contact-us form .input-parent option {
+    color: gray;
+}
+
+#contact-us form button {
+    padding: 10px 40px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    outline: 0;
+    margin: 20px auto;
+    transition: 0.5s;
+}
+
+#contact-us form button:hover {
+    background-color: var(--main-color);
+}
+
+
+/* footer */
+
+#footer {
+    width: 100%;
+    background-color: var(--main-color);
+    color: white;
+}
+
+#footer .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#footer ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer ul li:first-child {
+    margin-right: 15px;
+}
+
+#footer ul li a {
+    color: white;
+}
+
+
+/* elevator */
+
+.elevator {
+    width: 50px;
+    height: 50px;
+    background-color: var(--main-color);
+    color: white;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    position: fixed;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    opacity: 0.7;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.elevator:hover {
+    opacity: 0.9;
+}
+
+@media(max-width:767px) {
+    #our-story .our-story-content .any-section-caption .our-story-description {
+        flex-wrap: wrap;
+    }
+    #our-story .our-story-content .any-section-caption .our-story-description p {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    #our-story .our-story-content .any-section-caption .our-story-description p:last-child {
+        width: 100%;
+        margin-bottom: 0;
+    }
+    .any-section-detail-box {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .any-section-detail-box .detail-box {
+        width: 100%;
+    }
+    .any-section-detail-box .detail-box:last-child {
+        margin-top: 60px;
+    }
+    #who-we-are .customers {
+        display: flex;
+        flex-direction: column;
+    }
+    #who-we-are .customers .customes-side {
+        padding: 20px;
+        width: 100%;
+    }
+    #who-we-are .customers .customes-side .detail-box {
+        width: 100%;
+        margin-bottom: 50px;
+        margin-top: 0;
+    }
+    #who-we-are .customers .customes-side .detail-box figcaption {
+        font-size: 30px;
+    }
+    #wedding-details .any-section-detail-box .detail-box>h3 {
+        font-size: 30px;
+    }
+    #accomodation .any-section-detail-box .detail-box {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    #registry .any-section-detail-box .detail-box {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    #contact-us form .input-parent {
+        width: 100%;
+    }
+}
+
+@media(min-width:768px) and (max-width:1023px) {}
+
+@media(max-width:1023px) {
+    #header .nav {
+        display: flex;
+        background-color: var(--main-color);
+        width: 100%;
+    }
+    #header .nav ul {
+        display: none;
+    }
+    #header .nav .menue-toggler {
+        display: block;
+    }
+    #header {
+        min-height: 400px;
+    }
+    #header .header-section {
+        margin: 100px 0;
+    }
+    #header .header-section h1 {
+        font-size: 80px;
+        word-spacing: 1.5rem;
+        margin-bottom: 30px;
+    }
+    #header .header-section p {
+        font-size: 14px;
+    }
+}
